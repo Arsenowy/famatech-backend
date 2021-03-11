@@ -1,3 +1,6 @@
-<?php
+<?php include("./admin/includes/header.php"); ?>
 
-phpinfo();
+<!-- login page -->
+
+
+<?php include("./admin/includes/footer.php"); ?>
