@@ -1,9 +1,6 @@
 <?php include("includes/header.php"); ?>
 
-<!-- main page -->
-<?php
-
-?>
+<h1>Hello <?php echo $session->user_id ?></h1>
 
 
 <?php include("./includes/footer.php"); ?>
