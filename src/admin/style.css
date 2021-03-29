@@ -1,0 +1,120 @@
+body {
+    background-color: #222;
+}
+/* login page */
+.bg-color-dark {
+    background-color: #222;
+}
+
+.form_container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.form_row {
+    width: 500px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-control {
+    background-color: #222;
+    text-align: center;
+    border: 2px solid;
+    height: 50px;
+    width: 300px;
+    border-radius: 25px;
+    margin: 1.5rem auto;
+}
+
+.form-yellow {
+    border-color: #d4bc35;
+}
+
+.form-blue {
+    border-color: #3498db;
+}
+
+.form-input {
+    transition: all 0.5s cubic-bezier(.81,-0.64,.63,.74);
+    outline: none;
+    color: #ddd;
+}
+.form-input:focus {
+    width: 350px;
+    background-color: #222;
+    border-color: #6bd462;
+    box-shadow: none;
+    color: #ddd;
+}
+.form-input::placeholder {
+    color: #888;
+    transition: all 0.3s ease;
+}
+.form-input:focus::placeholder {
+    color: #999;
+}
+.form-btn {
+    width: 200px;
+    color: #aaa;
+    transition: 0.3s color ease;
+    border-width: 3px;
+}
+.form-btn:hover.form-blue {
+    animation: btn-blue 1s infinite;
+    color: #ccc;
+}
+.form-btn:hover.form-yellow {
+    animation: btn-yellow 1s infinite;
+    color: #ccc;
+}
+
+.form-btn:focus {
+    background: #222;
+    box-shadow: none;
+}
+
+.form_title {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.form-link {
+    text-align: center;
+    color: #888;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.form-link:hover {
+    color: #aaa;
+    text-decoration: none;
+
+}
+
+@keyframes btn-blue {
+	0% {
+		border-color: #3498db;
+	}
+	50% {
+        border-color: #6bd462;
+    }
+	100% {
+		border-color: #3498db;
+	}
+}
+@keyframes btn-yellow {
+	0% {
+		border-color: #d4bc35;
+	}
+	50% {
+        border-color: #6bd462;
+    }
+	100% {
+		border-color: #d4bc35;
+	}
+}
