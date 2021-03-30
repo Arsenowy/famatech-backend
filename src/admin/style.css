@@ -25,6 +25,7 @@ body::-webkit-scrollbar-track {
 .form_container {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .form_row {
@@ -159,6 +160,7 @@ body::-webkit-scrollbar-track {
 
 .note__container {
     padding-left: 1.5rem;
+    position: relative;
 }
 .note__menu {
     text-align: right;
@@ -187,6 +189,7 @@ body::-webkit-scrollbar-track {
 }
 
 .note__element {
+    min-width: 270px;
     text-decoration: none;
     transition: 0.3s color ease;
     border-width: 3px;
@@ -234,6 +237,16 @@ body::-webkit-scrollbar-track {
 
 .button__logout {
     border-color: rgb(201, 0, 0);
+    position: absolute;
+    top: 50px;
+    right: 3.5rem;
+}
+
+.button__back {
+    border-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50px;
+    left: 3.5rem;
 }
 
 .button__add-note {

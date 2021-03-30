@@ -15,16 +15,14 @@ $notes = Note::find_notes_by_author($user_id);
         <h2 class="text-white note__subheading">What are you thinking about today? </h2>
         <a class="button button__add-note" href="add_note.php">Add note</a>
     </div>
-    <div class="col note__menu d-flex justify-content-end">
-        <a class="button button__logout" href="logout.php">Logout</a>
-    </div>
+    <a class="button button__logout" href="logout.php">Logout</a>
 </div>
 
-<div class="row m-0 p-5">
+<div class="row m-0 p-xl-5 p-l-2 <?php if (count($notes)>1) echo "justify-content-center" ?>">
     <?php foreach ($notes as $note) : ?>
-        <div class="col-sm-5 col-md-4 col-xl-3 col-xxl-2 m-4 p-3 text-white note__element">
+        <div class="col-xs-7 col-sm-5 col-md-4 col-xl-3 col-xxl-2 m-4 p-4 text-white note__element">
             <h3><?php echo $note->title; ?></h3>
-            <p><?php echo $note->body; ?></p>
+            <p><?php echo $note->body;?></p>
             <a class="note__delete" href="delete_note.php?id=<?php echo $note->id ?>"><i class="fas fa-times"></i></a>
         </div>
     <?php endforeach ?>

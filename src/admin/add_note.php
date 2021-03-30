@@ -21,6 +21,8 @@ if (isset($_POST['create_note'])) {
 }
 ?>
 <div class="form_container">
+    <a class="button button__logout" href="logout.php">Logout</a>
+    <a class="button button__back" href="index.php">Back</a>
     <div class="form_row">
         <form method="POST">
             <h1 class="form_title">Add new note</h1>
