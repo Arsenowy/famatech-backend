@@ -22,22 +22,24 @@ if (isset($_POST['create'])) {
     $the_message = "";
     $username = "";
     $password = "";
+    $first_name = "";
 }
 
 ?>
 
 <div class="form_container">
+<a class="button button__back" href="login.php">Back to login</a>
 	<div class="form_row">
 		<form method="POST">
 			<h1 class="form_title">Register</h1>
 			<div class="form-group my-2">
-				<input autocomplete="off" type="text" name="username" class="form-control form-input bg-color-dark form-yellow" placeholder="Enter password" value="<?php echo htmlentities($password) ?>">
+				<input required  autocomplete="off" type="text" name="username" class="form-control form-input bg-color-dark form-yellow" placeholder="Enter username" value="<?php echo htmlentities($username) ?>">
 			</div>
 			<div class="form-group my-2">
-				<input type="password" name="password" class="form-control form-input bg-color-dark form-yellow" placeholder="Enter your name" value="<?php echo htmlentities($password) ?>">
+				<input  required type="password" name="password" class="form-control form-input bg-color-dark form-yellow" placeholder="Enter your password" value="<?php echo htmlentities($password) ?>">
 			</div>
             <div class="form-group my-2">
-                <input autocomplete="off" type="text" name="first_name" class="form-control form-input bg-color-dark form-yellow" placeholder="Enter your name" value="<?php echo htmlentities($password) ?>">
+                <input required  autocomplete="off" type="text" name="first_name" class="form-control form-input bg-color-dark form-yellow" placeholder="Enter your name" value="<?php echo htmlentities($first_name) ?>">
 			</div>
 			<button type="submit" name="create" class="form-control form-btn my-5 form-yellow">Submit</button>
             <div class="form-group text-center">

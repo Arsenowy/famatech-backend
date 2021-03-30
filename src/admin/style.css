@@ -212,6 +212,16 @@ body::-webkit-scrollbar-track {
     background-color: #222;
     transform: translate(35%, -35%);
 }
+.note__edit {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s all ease;
+    margin-top: 1rem;
+}
+.note__edit:hover {
+    color: #aaa;
+    text-decoration: none;
+}
 
 /* ///////////////////////////////////////// */
 
@@ -243,7 +253,7 @@ body::-webkit-scrollbar-track {
 }
 
 .button__back {
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(221, 221, 221);
     position: absolute;
     top: 50px;
     left: 3.5rem;

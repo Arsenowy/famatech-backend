@@ -3,7 +3,9 @@ include("includes/header.php");
 
 if (!$session->is_signed_in()) redirect("login.php");
 
-$note = new Note();
+if (isset($_GET['id'])) {
+    $note = Note::find_by_id($_GET['id']);
+} else $note = new Note();
 
 if (isset($_POST['create_note'])) {
     $title = trim(htmlentities($_POST['title']));
@@ -27,10 +29,10 @@ if (isset($_POST['create_note'])) {
         <form method="POST">
             <h1 class="form_title">Add new note</h1>
             <div class="form-group my-2">
-                <input autocomplete="off" type="text" name="title" class="form-control form-input bg-color-dark form-blue" placeholder="Enter title" value="<?php echo htmlentities($note->title) ?>">
+                <input autocomplete="off" type="text" name="title" class="form-control form-input bg-color-dark form-blue" placeholder="Enter title" value="<?php $note->title ?>">
             </div>
             <div class="form-group my-2">
-                <textarea type="text" name="body" maxlength="150" class="form-control form-input bg-color-dark form-blue form-big" placeholder="Enter your note" value="<?php echo htmlentities($note->body) ?>"></textarea>
+                <textarea type="text" name="body" maxlength="150" class="form-control form-input bg-color-dark form-blue form-big" placeholder="Enter your note"><?php echo $note->body ?></textarea>
             </div>
 
             <div class="form-group my-2 d-flex justify-content-center form-radio">

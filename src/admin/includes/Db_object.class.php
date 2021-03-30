@@ -98,6 +98,23 @@ class Db_Object
             return true;
         } else return false;
     }
+    private function update()
+    {
+        global $database;
+        $properties = $this->clean_properties();
+        $properties_pairs = array();
+
+        foreach ($properties as $key => $value) {
+            $properties_pairs[] = "{$key} = '{$value}' ";
+        }
+
+        $sql = "UPDATE " . static::$db_table . " SET ";
+        $sql .= implode(", ", $properties_pairs);
+        $sql .= " WHERE id= " . $this->id;
+        $database->query($sql);
+
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+    }
     public function delete()
     {
         global $database;

@@ -1,5 +1,5 @@
 var note = document.querySelectorAll('.note__element');
-i = 320;
+i = 280;
 
 note.forEach(el => {
     el.setAttribute('style', `border-color: hsl(${i}, 100%, 50%);`);
