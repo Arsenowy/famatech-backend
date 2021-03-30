@@ -118,3 +118,100 @@ body {
 		border-color: #d4bc35;
 	}
 }
+
+/* /////////////////////////////////// */
+/* notes */
+
+.note__container {
+    padding-left: 1.5rem;
+}
+.note__menu {
+    text-align: right;
+    padding: 3rem;
+}
+
+
+.note__heading {
+    margin: 3rem;
+    font-size: 6rem;
+    font-weight: 200;
+    letter-spacing: -2px;
+}
+.note__subheading {
+    margin: 3rem;
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: -2px;
+}
+
+strong {
+    font-weight: 300;
+}
+
+.note__element {
+    text-decoration: none;
+    transition: 0.3s color ease;
+    border-width: 3px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 25px;
+    border-color: rgb(0, 225, 255);
+    position: relative;
+}
+
+.note__delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    color: white;
+    background-color: #222;
+    transform: translate(35%, -35%);
+}
+
+/* ///////////////////////////////////////// */
+
+.button {
+    display: block;
+    height: 50px;
+    width: 150px;
+    margin: 0 3rem;
+    padding: 0.55rem;
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s all ease;
+    border-width: 3px;
+    background-color: #222;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 25px;
+}
+.button:hover {
+    color: #fff;
+    font-weight: 500;
+}
+
+.button__logout {
+    border-color: rgb(201, 0, 0);
+}
+
+.button__add-note {
+    border-color: rgb(90, 224, 0);
+}
+.fa-times {
+    font-size: 1.2rem;
+    transition: transform 0.8s ease-out;
+    text-align: center;
+    padding: 6px 9px;
+    color: #fff;
+
+}
+.fa-times:hover {
+    transform: rotate(400deg);
+    border-color: hsl(19, 100%, 50%);
+
+}
+
