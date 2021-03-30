@@ -30,5 +30,5 @@ $notes = Note::find_notes_by_author($user_id);
     <?php endforeach ?>
 </div>
 
-<script src="script.js"></script>
+<script src="color_notes.js"></script>
 <?php include("./includes/footer.php"); ?>

@@ -28,14 +28,17 @@ if (isset($_POST['submit'])) {
 		<form method="POST">
 			<h1 class="form_title">login</h1>
 			<div class="form-group my-2">
-				<input autocomplete="off" type="text" name="username" class="form-control form-input bg-color-dark form-blue" placeholder="Enter username" value="<?php echo htmlentities($username) ?>">
+				<input autocomplete="off" type="text" name="username"
+					class="form-control form-input bg-color-dark form-blue" placeholder="Enter username"
+					value="<?php echo htmlentities($username) ?>">
 			</div>
 			<div class="form-group my-2">
-				<input type="password" name="password" class="form-control form-input bg-color-dark form-blue" placeholder="Enter password" value="<?php echo htmlentities($password) ?>">
+				<input type="password" name="password" class="form-control form-input bg-color-dark form-blue"
+					placeholder="Enter password" value="<?php echo htmlentities($password) ?>">
 			</div>
 			<button type="submit" name="submit" class="form-control form-btn my-4 mt-5 form-blue">Submit</button>
 			<div class="form-group text-center">
-				<a class="form-link" href="register.php">Don't you have an account yet? Register now!</a>
+				<a class="form-link" href="register.php">Don't you have an account yet? <strong>Register now!</strong></a>
 			</div>
 		</form>
 	</div>

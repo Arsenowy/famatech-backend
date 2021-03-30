@@ -6,4 +6,3 @@ note.forEach(el => {
     i-=30;
     if (i < 20) i = 320;
 });
-
