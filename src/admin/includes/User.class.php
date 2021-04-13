@@ -20,4 +20,13 @@ class User extends Db_Object {
         $the_result_array = self::find_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
     }
+    public function check_availability() {
+        $sql = "SELECT * FROM " . static::$db_table . " WHERE ";
+        $sql .= "username = '" . $this->username . "' ";
+        $sql .= "LIMIT 1";
+
+        $the_result_array = self::find_query($sql);
+        // if array is empty (username is available) -> return true
+        return empty($the_result_array) ? true : false;
+    }
 }

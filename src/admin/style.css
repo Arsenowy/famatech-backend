@@ -22,6 +22,12 @@ body::-webkit-scrollbar-track {
     background-color: #222;
 }
 
+.form-btn:focus {
+    background: #222;
+    box-shadow: none;
+    color: #ddd;
+    border-color: #38a7f1;
+}
 .form_container {
     width: 100vw;
     height: 100vh;
@@ -62,7 +68,6 @@ body::-webkit-scrollbar-track {
 .form-input:focus {
     width: 350px;
     background-color: #222;
-    border-color: #6bd462;
     box-shadow: none;
     color: #ddd;
 }
@@ -76,6 +81,12 @@ body::-webkit-scrollbar-track {
     color: #999;
     margin: auto;
 }
+
+.form_message {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
 .form-big {
     height: 180px;
     width: 400px;
@@ -105,10 +116,6 @@ body::-webkit-scrollbar-track {
     color: #ccc;
 }
 
-.form-btn:focus {
-    background: #222;
-    box-shadow: none;
-}
 .form-radio {
     color: #ddd;
 }
@@ -129,8 +136,21 @@ body::-webkit-scrollbar-track {
 .form-link:hover {
     color: #aaa;
     text-decoration: none;
-
 }
+/* register validation */
+.form-control:focus:invalid {
+    border-color: #b81515;
+}
+input.form-control:focus:valid {
+    border-color: #6bd462;
+}
+
+input.form-control:valid {
+    border-color: #6bd462;
+}
+
+
+
 
 @keyframes btn-blue {
 	0% {
@@ -148,7 +168,7 @@ body::-webkit-scrollbar-track {
 		border-color: #d4bc35;
 	}
 	50% {
-        border-color: #6bd462;
+        border-color: #ce8d14;
     }
 	100% {
 		border-color: #d4bc35;
@@ -223,6 +243,10 @@ body::-webkit-scrollbar-track {
     text-decoration: none;
 }
 
+.note__notes {
+    padding: 3rem;
+}
+
 /* ///////////////////////////////////////// */
 
 .button {
@@ -276,3 +300,65 @@ body::-webkit-scrollbar-track {
 
 }
 
+@media (max-width: 1200px)  {
+    .note__notes {
+        padding: 3rem 1.5rem;
+    }
+    .note__heading {
+        margin: 2rem;
+        font-size: 5rem;
+    }
+    .note__subheading {
+        margin: 2rem;
+        font-size: 2.5rem;
+    }
+    .button__logout {
+        top: 35px;
+        right: 1.5rem;
+    }
+}
+@media (max-width: 800px)  {
+    .note__notes {
+        padding: 2.5rem 0.5rem;
+    }
+    .note__heading {
+        margin: 2rem 0rem;
+        font-size: 4rem;
+    }
+    .note__subheading {
+        margin: 2rem 0rem;
+        font-size: 2rem;
+    }
+    .button__logout {
+        top: 30px;
+        right: -1rem;
+    }
+    .note__container {
+    padding-left: 0.75rem;
+}
+}
+@media (max-width: 600px)  {
+    .note__notes {
+        padding: 2.5rem 0.5rem;
+    }
+    .note__heading {
+        margin: 2rem 0rem;
+        font-size: 3rem;
+    }
+    .note__subheading {
+        margin: 2rem 0rem;
+        font-size: 1.6rem;
+    }
+    .button {
+        margin: 0 3rem 0 0;
+    }
+
+    .button__logout {
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+    .note__container {
+    padding-left: 0.75rem;
+}
+}

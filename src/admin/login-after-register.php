@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 	<div class="form_row">
 		<form method="POST">
 			<h1 class="form_title">login</h1>
-			<p class="form_message"><?php echo $the_message ?></p>
+			<p class="text-white text-center"><?php echo "Your account was created succesfully" ?></p>
 			<div class="form-group my-2">
 				<input autocomplete="off" type="text" name="username" required
 					class="form-control form-input bg-color-dark form-blue" placeholder="Enter username"
